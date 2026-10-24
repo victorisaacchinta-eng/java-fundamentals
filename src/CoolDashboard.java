@@ -54,7 +54,7 @@ import java.util.Random;
             clockLabel.setText(LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
         }
 
-        // sidebar
+        // ---------------- Sidebar ----------------
         private JComponent buildSidebar() {
             JPanel sidebar = new JPanel() {
                 @Override
@@ -98,7 +98,7 @@ import java.util.Random;
             return sidebar;
         }
 
-        // header
+        // ---------------- Header ----------------
         private JComponent buildHeader() {
             JPanel header = new JPanel(new BorderLayout()) {
                 @Override
@@ -127,7 +127,7 @@ import java.util.Random;
             return header;
         }
 
-        // body: stat cards and the chart
+        // ---------------- Body ----------------
         private JComponent buildBody() {
             JPanel body = new JPanel(new BorderLayout());
             body.setOpaque(false);
@@ -151,6 +151,8 @@ import java.util.Random;
 
             return body;
         }
+
+        // ---------------- Custom Components ----------------
 
         /** Sidebar navigation button with hover + selected highlighting. */
         static class NavButton extends JButton {
