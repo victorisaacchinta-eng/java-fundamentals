@@ -174,13 +174,15 @@ import java.util.Random;
                 addMouseListener(new MouseAdapter() {
                     @Override public void mouseEntered(MouseEvent e) { hover = true; repaint(); }
                     @Override public void mouseExited(MouseEvent e)  { hover = false; repaint(); }
-                    @Override public void mouseClicked(MouseEvent e) {
-                        Container parent = getParent();
-                        for (Component c : parent.getComponents()) {
-                            if (c instanceof NavButton) ((NavButton) c).setSelectedState(false);
-                        }
-                        setSelectedState(true);
+                });
+                // An action fires for a mouse click (even if the pointer moves a little
+                // between press and release) and for Space on a focused button.
+                // mouseClicked fires for neither.
+                addActionListener(e -> {
+                    for (Component c : getParent().getComponents()) {
+                        if (c instanceof NavButton) ((NavButton) c).setSelectedState(false);
                     }
+                    setSelectedState(true);
                 });
             }
 
