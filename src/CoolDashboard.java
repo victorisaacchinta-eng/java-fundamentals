@@ -24,7 +24,7 @@ import java.util.Random;
         private final ChartPanel chartPanel = new ChartPanel();
 
         public CoolDashboard() {
-            setTitle("CoolDashboard \\u2014 Java Swing Demo");
+            setTitle("CoolDashboard — Java Swing Demo");
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             setSize(1000, 640);
             setMinimumSize(new Dimension(780, 520));
@@ -72,15 +72,15 @@ import java.util.Random;
             sidebar.setLayout(new BoxLayout(sidebar, BoxLayout.Y_AXIS));
             sidebar.setBorder(BorderFactory.createEmptyBorder(24, 16, 24, 16));
 
-            JLabel logo = new JLabel("\\u2728 CoolDash");
+            JLabel logo = new JLabel("✨ CoolDash");
             logo.setFont(new Font("SansSerif", Font.BOLD, 22));
             logo.setForeground(TEXT_LIGHT);
             logo.setAlignmentX(Component.LEFT_ALIGNMENT);
             sidebar.add(logo);
             sidebar.add(Box.createRigidArea(new Dimension(0, 30)));
 
-            String[] items = { "\\u2302  Dashboard", "\\uD83D\\uDCC8  Analytics", "\\uD83D\\uDC65  Team",
-                    "\\u2699  Settings", "\\u2708  Messages" };
+            String[] items = { "⌂  Dashboard", "📈  Analytics", "👥  Team",
+                    "⚙  Settings", "✈  Messages" };
             for (int i = 0; i < items.length; i++) {
                 NavButton b = new NavButton(items[i], i == 0);
                 b.setAlignmentX(Component.LEFT_ALIGNMENT);
@@ -115,7 +115,7 @@ import java.util.Random;
             header.setPreferredSize(new Dimension(0, 70));
             header.setBorder(BorderFactory.createEmptyBorder(0, 24, 0, 24));
 
-            JLabel title = new JLabel("Welcome back, Victor \\uD83D\\uDC4B");
+            JLabel title = new JLabel("Welcome back, Victor 👋");
             title.setFont(new Font("SansSerif", Font.BOLD, 20));
             title.setForeground(TEXT_LIGHT);
             header.add(title, BorderLayout.WEST);
